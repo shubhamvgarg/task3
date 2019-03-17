@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<center><h1 class="form-control" style="font-size:48px;color:red">{{ Title }}</h1> </center><br/>
+<div  class="form-control" style="font-size:32px;color:green" ><h3>{{ Description }}</h3></div><br/>
+
+{% for i,j in path_ori %}
+<div class="control-group">
+<a href='{{ i }}'  class="fa fa-download" 
+ <button id='extraUpload' type="button" class="fa fa-plus" style="font-size:48px;"></a><br>
+<iframe class="container" src ="{% static "web/viewer.html" %}?file={{ j }}" height="600" width="400" ></iframe><br/>
+
+</div>
+
+<!-- {{ j }}""
+"{% static 'web/viewer.html' %}"  -->
+{% endfor %}
+{% endblock %}

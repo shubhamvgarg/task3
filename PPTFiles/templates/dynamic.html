@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<center><h1 class="form-control" style="font-size:48px;color:red">Attach PPT,PPTX and PPS file only</h1></center>
+
+<form method="POST" enctype="multipart/form-data" class='form'> {% csrf_token %}
+<div id="div_id_Title" class="control-group">
+  <label for="id_Title" class="control-label requiredField">Title<span class="asteriskField">*</span> </label>
+  <div class="controls"> <textarea name="Title" cols="40" rows="3" required  class="form-control" id="id_Title"></textarea> </div>
+ </div>
+
+ <div id="div_id_Description" class="control-group">
+   <label for="id_Description" class="control-label requiredField">Description<span class="asteriskField">*</span> </label>
+   <div class="controls"> <textarea name="Description" cols="40" rows="3" required  class="form-control" id="id_Description"></textarea> </div>
+ </div>
+ <div id="div_id_files" class="control-group"> <label for="id_files" class="control-label requiredField">Files<span class="asteriskField">*</span> </label>
+
+   <!-- <div class="controls"> <input type="file" name="files" multiple="multiple" required class="multiuploadmetainput" id="id_files" /> </div> -->
+
+ </div>
+
+ <div id='Uploadcontainer'>
+  
+    <input type='file' name='uploadfiles[]' style="display: block;margin-top: 10px;margin-bottom: 10px" class="uploadfile form-control"  />
+  
+ </div>
+ <button id='extraUpload' type="button" class="fa fa-plus" style="font-size:48px;color:red"></button>
+ <script type='text/javascript'>
+   $('#extraUpload').click(function(){
+
+       $('.uploadfile:last').clone().appendTo('#Uploadcontainer');
+       //"<br>".appendTo('#Uploadcontainer');
+       var $el = $('.uploadfile:last');
+       $el.wrap('<form>').closest('form').get(0).reset();
+       $el.unwrap();
+   });
+ </script>
+
+    <input type="submit" value="Save" class="form-control"/>
+</form>
+{% endblock %}
