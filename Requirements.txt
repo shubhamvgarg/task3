@@ -1,0 +1,6 @@
+Django==1.11
+mysql-connector-python==8.0.15
+mysqlclient==1.4.2.post1
+protobuf==3.7.0
+pytz==2018.9
+six==1.12.0
