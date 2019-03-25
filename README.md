@@ -2,8 +2,7 @@
 
 ## Requirements
 
-Step 1 : Create a virtual environment <br />
-Step 2 : Install python 3.6 , django 1.11 and MySQL <br /> 
+Please see Requirements.txt
 
 ## Installations
 
@@ -43,6 +42,18 @@ While installing MySQL there will be prompts asking for username and password. S
 To install MySQL python connector :
 
 > pip install mysql-connector-python
+
+To install mysqlclient : 
+
+> pip install mysqlclient
+
+To install unoconv :
+
+> sudo apt-get install unoconv
+
+## Description
+
+This code will not run in virtual environment because it requires support from libreoffice.
 
 ## How to use
 
