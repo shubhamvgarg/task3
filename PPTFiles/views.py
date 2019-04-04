@@ -13,8 +13,10 @@ import os
 
 
 def Upload(request):
+    #if request is get request
     if request.method=='GET':
         return render(request,"dynamic.html",{})
+    #if request is post request
     if request.method=='POST':
         obj=PPTFiles.objects.create()
 
@@ -23,6 +25,7 @@ def Upload(request):
         obj.Title=request.POST["Title"]
         obj.Description=request.POST["Description"]
         obj.save();
+        #Create PPTFiles object and use it id as foreign key in PPTFiles_Attachment
         print(obj.id)
         for i in val:
             name=i.name
