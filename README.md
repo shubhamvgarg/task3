@@ -1,6 +1,6 @@
 # FOSSEE Summer Fellowship 2019: Task 3: Uploading and viewing slideshows
 
-## Requirements
+## Requirement
 
 Please see Requirements.txt
 
@@ -55,6 +55,6 @@ To install unoconv :
 
 This code will not run in virtual environment because it requires support from libreoffice.
 
-## How to use
+## How to use it
 
 [![Watch the video](https://img.youtube.com/vi/WM4EzKmQoLs/maxresdefault.jpg)](https://youtu.be/WM4EzKmQoLs)
