@@ -1,4 +1,4 @@
-Django==1.11
+Django==1.11.29
 mysql-connector-python==8.0.15
 mysqlclient==1.4.2.post1
 protobuf==3.7.0
