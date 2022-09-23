@@ -1,6 +1,6 @@
 Django==1.11.29
 mysql-connector-python==8.0.15
 mysqlclient==1.4.2.post1
-protobuf==3.7.0
+protobuf==3.18.3
 pytz==2018.9
 six==1.12.0
